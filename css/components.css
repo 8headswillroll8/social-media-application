@@ -63,11 +63,6 @@ footer {
   flex-direction: column;
 }
 
-.footer__meta {
-  display: flex;
-  justify-content: space-between;
-}
-
 /* Buttons  */
 
 .btn {

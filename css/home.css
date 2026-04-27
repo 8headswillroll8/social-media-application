@@ -12,7 +12,7 @@ body {
 }
 
 .hero__text {
-  padding-bottom: var(--space-7);
+  padding-bottom: var(--space-14);
 }
 
 .hero__visual {
