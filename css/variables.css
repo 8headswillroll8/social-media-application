@@ -26,8 +26,8 @@
 
   /* Typography */
   --font-family-title:
-    "Gamay", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif;
+    "Gamay-expanded", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
   --font-family-base:
     "Rethink Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif;
@@ -39,6 +39,7 @@
   --font-size-400: 1rem; /* 16px */
   --font-size-500: 1.125rem; /* 18px */
   --font-size-900: 2.5rem; /* 40px */
+  --font-size-1000: 3rem; /* 48px */
 
   /* Font weight */
   --font-w-light: 200;
@@ -49,6 +50,7 @@
 
   /* Line height */
   --line-height-base: 1.6;
+  --line-height-title: 1;
 
   /* Spacing (4px scale) */
   --space-1: 0.25rem; /* 4px */
@@ -67,7 +69,9 @@
   --space-14: 4rem; /* 64px */
 
   /* Layout */
+  --container-max-width: 72rem; /* 1152px */
   --container-padding: 1rem; /* 16px mobile */
+  --wrapper-max-width: 40rem; /* 640px */
 
   /* Radius */
   --radius: 8px;

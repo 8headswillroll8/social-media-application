@@ -12,6 +12,70 @@
     <title>Flori | Din digitale hage</title>
   </head>
   <body>
-    <button class="btn"><span class="btn__text">Lorem Ipsum</span></button>
+    <header class="header">
+      <img
+        class="header__logo--compact"
+        src="/assets/graphics/logos/flori-logo-logomark.svg"
+        alt="Flori logomark"
+      />
+      <img
+        class="header__logo--full"
+        src="/assets/graphics/logos/flori-logo-main.svg"
+        alt="Flori logo"
+      />
+      <img
+        class="header__logout"
+        src="/assets/graphics/icons/icon-log-out.svg"
+        alt=""
+      />
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__visual">
+          <dotlottie-wc
+            src="https://lottie.host/f81e0869-c606-4c1c-9e40-a666381ddd42/BWs0WPtE4v.lottie"
+            autoplay
+            loop
+          >
+          </dotlottie-wc>
+        </div>
+        <div class="hero__content">
+          <h1>Der plantefolk møtes</h1>
+          <div class="hero__text">
+            <p>Et sosialt sted for deg med grønne fingre.</p>
+            <p>Inspirasjon, tips og det du dyrker.</p>
+            <p>Samlet på ett sted.</p>
+          </div>
+          <a class="btn" href="/account/login.html"
+            ><span class="btn__text">Kom i gang</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="footer__inner">
+        <div>
+          <img
+            class="footer__logo"
+            src="/assets/graphics/logos/flori-logo-main-color.svg"
+            alt="Flori logo"
+          />
+        </div>
+        <nav class="footer__nav">
+          <a href="#">Om oss</a>
+          <a href="/account/register.html">Start din hage</a>
+          <a href="/account/login.html">Logg inn</a>
+        </nav>
+        <div class="footer__meta">
+          <a href="#">Retningslinjer</a>
+          <a href="#">Personvern</a>
+          <p>©2026 Flori</p>
+        </div>
+      </section>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.10/dist/dotlottie-wc.js"
+    ></script>
   </body>
 </html>

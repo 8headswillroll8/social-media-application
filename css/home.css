@@ -1,0 +1,40 @@
+/* hero section */
+body {
+  background-color: rgba(234, 253, 126, 0.2);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0 var(--container-padding);
+}
+
+.hero__text {
+  padding-bottom: var(--space-7);
+}
+
+.hero__visual {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: var(--space-4);
+}
+
+.hero__visual dotlottie-wc {
+  width: auto;
+  height: 300px;
+}
+
+@media (min-width: 1024px) {
+  .hero__visual {
+    height: 500px;
+  }
+
+  .hero__visual dotlottie-wc {
+    height: 500px;
+  }
+}
