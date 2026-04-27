@@ -72,7 +72,7 @@ footer {
   background: var(--color-gradient-main);
   font-weight: var(--font-w-medium);
   height: 50px;
-  max-width: 325px;
+  max-width: 430px;
   width: 100%;
   border-radius: 8px;
 }
@@ -84,4 +84,48 @@ footer {
 
 .btn:hover .btn__text {
   transform: scale(1.06);
+}
+
+/* input fields */
+
+input {
+  background-color: rgba(234, 253, 126, 0.1);
+  height: 50px;
+  max-width: 430px;
+  width: 100%;
+  padding: 0 var(--space-4);
+  border-radius: 8px;
+  outline: 1px solid var(--color-neutral-100);
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid transparent;
+  background-image: linear-gradient(#fff, #fff), var(--color-gradient-main);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.has-error {
+  outline: 1px solid var(--color-error);
+}
+
+.txt {
+  font-size: var(--font-size-200);
+}
+
+.txt--error {
+  color: var(--color-error);
+}
+
+.txt--error {
+  color: var(--color-brand-lavender);
 }

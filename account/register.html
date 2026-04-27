@@ -3,14 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/variables.css" />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/register.css" />
-    <link rel="icon" href="assets/graphics/logos/flori-logo-favicon.svg" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/register.css" />
+    <link rel="icon" href="/assets/graphics/logos/flori-logo-favicon.svg" />
     <title>Flori | Register</title>
   </head>
   <body>
-    <script src="../js/pages/register.js"></script>
+    <header class="header">
+      <a href="../index.html">
+        <img
+          class="header__logo--compact"
+          src="/assets/graphics/logos/flori-logo-logomark.svg"
+          alt="Flori logomark" />
+        <img
+          class="header__logo--full"
+          src="/assets/graphics/logos/flori-logo-main.svg"
+          alt="Flori logo"
+      /></a>
+      <img
+        class="header__logout"
+        src="/assets/graphics/icons/icon-log-out.svg"
+        alt=""
+      />
+    </header>
+    <main>
+      <section class="register">
+        <div class="register__inner">
+          <div class="register__text">
+            <h1>Start din digitale hage</h1>
+            <p>Bli med og del det du dyrker</p>
+          </div>
+          <!-- email -->
+          <div class="field">
+            <label for="email" class="visually-hidden">E-post</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="navn@epost.no"
+              aria-describedby="email-feedback"
+              required
+            />
+            <div id="email-feedback" role="alert"></div>
+          </div>
+
+          <!-- password -->
+          <div class="field">
+            <label for="password" class="visually-hidden">Passord</label>
+            <input
+              id="password"
+              type="password"
+              name="password"
+              placeholder="Skriv inn passord"
+              aria-describedby="password-feedback"
+              required
+            />
+            <div id="password-feedback" role="alert"></div>
+          </div>
+
+          <!-- confirm password -->
+          <div class="field">
+            <label for="confirm-password" class="visually-hidden"
+              >Gjenta passordet</label
+            >
+            <input
+              id="confirm-password"
+              type="password"
+              name="confirmPassword"
+              placeholder="Skriv inn passordet på nytt"
+              aria-describedby="confirm-password-feedback"
+              required
+            />
+            <div id="confirm-password-feedback" role="alert"></div>
+          </div>
+
+          <button class="btn btn--register" id="login-button">
+            <span class="btn__text">Opprett konto</span>
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="footer__inner">
+        <div>
+          <img
+            class="footer__logo"
+            src="/assets/graphics/logos/flori-logo-main-color.svg"
+            alt="Flori logo"
+          />
+        </div>
+        <nav class="footer__nav">
+          <a href="#">Om oss</a>
+          <a href="/account/register.html">Start din hage</a>
+          <a href="/account/login.html">Logg inn</a>
+        </nav>
+        <div class="footer__meta">
+          <a href="#">Retningslinjer |</a>
+          <a href="#">Personvern</a>
+          <p>©2026 Flori</p>
+        </div>
+      </section>
+    </footer>
+    <script type="module" src="../js/pages/register.js"></script>
   </body>
 </html>
