@@ -67,9 +67,7 @@
   --space-14: 4rem; /* 64px */
 
   /* Layout */
-  --container-max-width: 72rem; /* 1152px */
   --container-padding: 1rem; /* 16px mobile */
-  --wrapper-max-width: 40rem; /* 640px */
 
   /* Radius */
   --radius: 8px;

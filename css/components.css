@@ -1,0 +1,19 @@
+/* Buttons  */
+
+.btn {
+  background: var(--color-gradient-main);
+  font-weight: var(--font-w-medium);
+  height: 58px;
+  max-width: 325px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.btn__text {
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+.btn:hover .btn__text {
+  transform: scale(1.06);
+}
