@@ -16,14 +16,6 @@ const confirmPasswordFeedback = document.getElementById(
   "confirm-password-feedback",
 );
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const isValid = validateInputs();
-
-  if (!isValid) return;
-});
-
 const validateInputs = () => {
   usernameFeedback.innerText = "";
   usernameFeedback.classList.remove("txt--error");
@@ -37,6 +29,10 @@ const validateInputs = () => {
   passwordFeedback.classList.remove("txt--error");
   password.classList.remove("has-error");
 
+  confirmPasswordFeedback.innerText = "";
+  confirmPasswordFeedback.classList.remove("txt--error");
+  confirmPassword.classList.remove("has-error");
+
   const usernameValue = username.value.trim();
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
@@ -45,7 +41,7 @@ const validateInputs = () => {
   let isValid = true;
 
   if (usernameValue === "") {
-    usernameFeedback.innerText = "Skriv inn et brukernavn";
+    usernameFeedback.innerText = "Skriv inn et brukernavn.";
     usernameFeedback.classList.add("txt--error");
     username.classList.add("has-error");
 
@@ -56,18 +52,24 @@ const validateInputs = () => {
     usernameFeedback.innerText = "Minst 3 tegn.";
     usernameFeedback.classList.add("txt--error");
     username.classList.add("has-error");
+
+    isValid = false;
   }
 
   if (usernameValue.includes(" ")) {
     usernameFeedback.innerText = "Kan ikke inneholde mellomrom.";
     usernameFeedback.classList.add("txt--error");
     username.classList.add("has-error");
+
+    isValid = false;
   }
 
   if (usernameValue.length > 20) {
     usernameFeedback.innerText = "Maks 20 tegn.";
     usernameFeedback.classList.add("txt--error");
     username.classList.add("has-error");
+
+    isValid = false;
   }
 
   if (emailValue === "") {
@@ -78,9 +80,10 @@ const validateInputs = () => {
     isValid = false;
   }
 
-  if (emailValue !== "" && !emailValue.includes("@")) {
-    emailFeedback.innerText = "Ugyldig e-postadresse.";
+  if (emailValue !== "" && !emailValue.endsWith("@stud.noroff.no")) {
+    emailFeedback.innerText = "E-post må slutte på @stud.noroff.no";
     emailFeedback.classList.add("txt--error");
+    email.classList.add("has-error");
 
     isValid = false;
   }
@@ -101,7 +104,15 @@ const validateInputs = () => {
     isValid = false;
   }
 
-  if (passwordValue !== confirmPasswordValue) {
+  if (confirmPasswordValue === "") {
+    confirmPasswordFeedback.innerText = "Gjenta passordet.";
+    confirmPasswordFeedback.classList.add("txt--error");
+    confirmPassword.classList.add("has-error");
+
+    isValid = false;
+  }
+
+  if (confirmPasswordValue !== "" && passwordValue !== confirmPasswordValue) {
     confirmPasswordFeedback.innerText = "Passordene må være like.";
     confirmPasswordFeedback.classList.add("txt--error");
     confirmPassword.classList.add("has-error");
@@ -110,7 +121,40 @@ const validateInputs = () => {
     isValid = false;
   }
 
-  if (isValid) {
-    window.location.href = "/account/login.html?registered=true";
-  }
+  return isValid;
 };
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const isValid = validateInputs();
+
+  if (!isValid) return;
+
+  try {
+    const registerData = {
+      name: username.value.trim(),
+      email: email.value.trim(),
+      password: password.value.trim(),
+    };
+
+    console.log("Register data:", registerData);
+
+    await post("/auth/register", registerData);
+
+    window.location.href = "/account/login.html?registered=true";
+  } catch (error) {
+    let message = "Noe gikk galt. Prøv igjen.";
+
+    if (error.message.toLowerCase().includes("email")) {
+      message = "E-post er allerede i bruk.";
+    }
+
+    if (error.message.toLowerCase().includes("profile")) {
+      message = "Brukernavnet er allerede tatt.";
+    }
+
+    confirmPasswordFeedback.innerText = message;
+    confirmPasswordFeedback.classList.add("txt--error");
+  }
+});
