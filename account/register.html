@@ -31,59 +31,58 @@
     </header>
     <main>
       <section class="register">
-        <div class="register__inner">
-          <div class="register__text">
-            <h1>Start din digitale hage</h1>
-            <p>Bli med og del det du dyrker</p>
-          </div>
-          <!-- email -->
-          <div class="field">
-            <label for="email" class="visually-hidden">E-post</label>
-            <input
-              id="email"
-              type="email"
-              name="email"
-              placeholder="navn@epost.no"
-              aria-describedby="email-feedback"
-              required
-            />
-            <div id="email-feedback" role="alert"></div>
-          </div>
+        <form class="register__form" novalidate>
+          <div class="register__inner">
+            <div class="register__text">
+              <h1>Start din digitale hage</h1>
+              <p>Bli med og del det du dyrker</p>
+            </div>
+            <!-- email -->
+            <div class="field">
+              <label for="email" class="visually-hidden">E-post</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="navn@epost.no"
+                aria-describedby="email-feedback"
+              />
+              <div id="email-feedback" aria-live="polite"></div>
+            </div>
 
-          <!-- password -->
-          <div class="field">
-            <label for="password" class="visually-hidden">Passord</label>
-            <input
-              id="password"
-              type="password"
-              name="password"
-              placeholder="Skriv inn passord"
-              aria-describedby="password-feedback"
-              required
-            />
-            <div id="password-feedback" role="alert"></div>
-          </div>
+            <!-- password -->
+            <div class="field">
+              <label for="password" class="visually-hidden">Passord</label>
+              <input
+                id="password"
+                type="password"
+                name="password"
+                placeholder="Skriv inn passord"
+                aria-describedby="password-feedback"
+              />
+              <div id="password-feedback" aria-live="polite"></div>
+            </div>
 
-          <!-- confirm password -->
-          <div class="field">
-            <label for="confirm-password" class="visually-hidden"
-              >Gjenta passordet</label
-            >
-            <input
-              id="confirm-password"
-              type="password"
-              name="confirmPassword"
-              placeholder="Skriv inn passordet på nytt"
-              aria-describedby="confirm-password-feedback"
-              required
-            />
-            <div id="confirm-password-feedback" role="alert"></div>
-          </div>
+            <!-- confirm password -->
+            <div class="field">
+              <label for="confirm-password" class="visually-hidden"
+                >Gjenta passordet</label
+              >
+              <input
+                id="confirm-password"
+                type="password"
+                name="confirmPassword"
+                placeholder="Skriv inn passordet på nytt"
+                aria-describedby="confirm-password-feedback"
+              />
+              <div id="confirm-password-feedback" aria-live="polite"></div>
+            </div>
 
-          <button class="btn btn--register" id="login-button">
-            <span class="btn__text">Opprett konto</span>
-          </button>
-        </div>
+            <button class="btn btn--register" id="login-button" type="submit">
+              <span class="btn__text">Opprett konto</span>
+            </button>
+          </div>
+        </form>
       </section>
     </main>
     <footer>

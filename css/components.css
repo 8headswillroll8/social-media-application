@@ -91,7 +91,6 @@ footer {
 input {
   background-color: rgba(234, 253, 126, 0.1);
   height: 50px;
-  max-width: 430px;
   width: 100%;
   padding: 0 var(--space-4);
   border-radius: 8px;
@@ -126,6 +125,6 @@ input:focus {
   color: var(--color-error);
 }
 
-.txt--error {
+.txt--help {
   color: var(--color-brand-lavender);
 }
