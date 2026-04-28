@@ -1,0 +1,33 @@
+body {
+  background-color: rgba(234, 253, 126, 0.2);
+}
+
+.login__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  margin: var(--space-14) var(--container-padding);
+  text-align: center;
+}
+.btn--login {
+  margin-top: var(--space-10);
+}
+
+.login__text {
+  margin-bottom: var(--space-10);
+}
+
+.field {
+  max-width: 430px;
+  width: 100%;
+  height: auto;
+}
+
+#username-feedback,
+#email-feedback,
+#password-feedback,
+#confirm-password-feedback {
+  margin-top: var(--space-2);
+  text-align: left;
+}

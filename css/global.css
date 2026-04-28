@@ -27,6 +27,15 @@ h1 {
   padding-bottom: var(--space-7);
 }
 
+main a,
+main a:visited {
+  color: var(--color-brand-lavender);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 @media (min-width: 768px) {
   body {
     font-size: var(--font-size-400);
