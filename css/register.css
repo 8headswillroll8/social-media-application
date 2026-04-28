@@ -24,6 +24,7 @@ body {
   height: auto;
 }
 
+#username-feedback,
 #email-feedback,
 #password-feedback,
 #confirm-password-feedback {
