@@ -23,11 +23,9 @@
         src="/assets/graphics/logos/flori-logo-main.svg"
         alt="Flori logo"
       />
-      <img
-        class="header__logout"
-        src="/assets/graphics/icons/icon-log-out.svg"
-        alt=""
-      />
+      <button class="header__logout">
+        <img src="/assets/graphics/icons/icon-log-out.svg" alt="" />
+      </button>
     </header>
     <main>
       <section class="hero">
@@ -46,7 +44,7 @@
             <p>Inspirasjon, tips og det du dyrker.</p>
             <p>Samlet på ett sted.</p>
           </div>
-          <a class="btn" href="/account/login.html"
+          <a class="btn" id="logout-btn" href="/account/login.html"
             ><span class="btn__text">Kom i gang</span></a
           >
         </div>
@@ -77,5 +75,6 @@
       type="module"
       src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.10/dist/dotlottie-wc.js"
     ></script>
+    <script src="./js/pages/home.js" type="module"></script>
   </body>
 </html>

@@ -15,9 +15,17 @@
   display: none;
 }
 
-.header__logo--compact,
-.header__logout {
+.header__logout.is-visible {
+  display: block;
+}
+
+.header__logo--compact {
   width: 20px;
+  height: auto;
+}
+
+.header__logout img {
+  width: 28px;
   height: auto;
 }
 
@@ -131,4 +139,14 @@ input:focus {
   padding: 5px 10px;
   border-radius: 8px;
   border: 1px solid var(--color-brand-lavender);
+}
+
+/* Links */
+.links,
+.links:visited {
+  color: var(--color-brand-lavender);
+}
+
+.links:hover {
+  text-decoration: underline;
 }

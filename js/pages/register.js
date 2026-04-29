@@ -1,4 +1,7 @@
 import { post } from "../api/apiClient.js";
+import { initHeader } from "../ui/header.js";
+
+initHeader();
 
 const form = document.querySelector(".register__form");
 
