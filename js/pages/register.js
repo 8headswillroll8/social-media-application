@@ -81,7 +81,7 @@ const validateInputs = () => {
   }
 
   if (emailValue !== "" && !emailValue.endsWith("@stud.noroff.no")) {
-    emailFeedback.innerText = "E-post må slutte på @stud.noroff.no";
+    emailFeedback.innerText = "E-post må slutte på @stud.noroff.no.";
     emailFeedback.classList.add("txt--error");
     email.classList.add("has-error");
 
