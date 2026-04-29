@@ -9,7 +9,8 @@ export function initHeader() {
   }
 
   logoutIcon.addEventListener("click", (e) => {
-    localStorage.removeItem("accessToken");
+    if (!token) return;
+    localStorage.removeItem("name", "accessToken");
 
     window.location.href = "../index.html";
   });

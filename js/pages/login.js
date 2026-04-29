@@ -89,7 +89,7 @@ form.addEventListener("submit", async (e) => {
     localStorage.setItem("accessToken", response.data.accessToken);
     localStorage.setItem("name", response.data.name);
 
-    window.location.href = "../index.html";
+    window.location.href = "../pages/posts.html";
   } catch (error) {
     let message = "Noe gikk galt. Prøv igjen.";
 

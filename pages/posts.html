@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/posts.css" />
+    <link rel="icon" href="../assets/graphics/logos/flori-logo-favicon.svg" />
+    <title>Flori | Feed</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="../index.html">
+        <img
+          class="header__logo--compact"
+          src="/assets/graphics/logos/flori-logo-logomark.svg"
+          alt="Flori logomark" />
+        <img
+          class="header__logo--full"
+          src="/assets/graphics/logos/flori-logo-main.svg"
+          alt="Flori logo"
+      /></a>
+      <button class="header__logout" type="button" aria-label="Logg ut">
+        <img src="/assets/graphics/icons/icon-log-out.svg" alt="" />
+      </button>
+    </header>
+    <main>
+      <section class="feed" aria-label="Innlegg">
+        <article class="card">
+          <div class="card__header">
+            <img
+              class="card__avatar"
+              src="../assets/images/users/user-helena.webp"
+              alt=""
+            />
+            <div class="card__author">
+              <p>Helena</p>
+              <time datetime="">Laster…</time>
+            </div>
+            <button type="button">Følger</button>
+          </div>
+
+          <div class="card__content">
+            <img
+              src="../assets/images/content/content-helena-01.webp"
+              alt="Mange planter i et drivhus"
+            />
+          </div>
+
+          <div class="card__caption">
+            <p>
+              <span>Helena</span> Favorittstedet mitt akkurat nå. Trenger
+              egentlig ikke mer enn dette
+            </p>
+          </div>
+
+          <div class="card__comments">
+            <p><span>Balkongdrøm</span> Tar du meg med neste gang?</p>
+          </div>
+
+          <div class="card__actions">
+            <button class="post__like" type="button" aria-label="Lik innlegget">
+              <img src="../assets/graphics/icons/icon-like.svg" alt="" />
+              <span class="post__count">12</span>
+            </button>
+            <button
+              class="post__comment"
+              type="button"
+              aria-label="Kommenter innlegget"
+            >
+              <img src="../assets/graphics/icons/icon-comment.svg" alt="" />
+              <span class="post__count">3</span>
+            </button>
+          </div>
+        </article>
+      </section>
+    </main>
+    <nav class="nav" aria-label="Hovednavigasjon">
+      <ul class="nav__list">
+        <!-- home -->
+        <li>
+          <a href="../pages/posts.html">
+            <img src="../assets/graphics/icons/icon-home.svg" alt="" />
+            <span>Hjem</span>
+          </a>
+        </li>
+
+        <!-- create -->
+        <li>
+          <a href="#">
+            <img src="../assets/graphics/icons/icon-plus.svg" alt="" />
+            <span>Opprett innlegg</span>
+          </a>
+        </li>
+
+        <!-- search -->
+        <li>
+          <a href="../index.html">
+            <img src="../assets/graphics/icons/icon-search.svg" alt="" />
+            <span>Søk</span>
+          </a>
+        </li>
+
+        <!-- profile -->
+        <li>
+          <a href="../pages/user-profile.html">
+            <img src="../assets/graphics/icons/icon-profile.svg" alt="" />
+            <span>Profil</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <script type="module" src="../js/pages/posts.js"></script>
+  </body>
+</html>
