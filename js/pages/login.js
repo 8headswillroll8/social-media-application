@@ -1,5 +1,6 @@
 import { post } from "../api/apiClient.js";
 import { initHeader } from "../ui/header.js";
+import { createApiKey } from "../api/auth.js";
 
 initHeader();
 
@@ -88,6 +89,16 @@ form.addEventListener("submit", async (e) => {
 
     localStorage.setItem("accessToken", response.data.accessToken);
     localStorage.setItem("name", response.data.name);
+
+    const existingKey = localStorage.getItem("apiKey");
+
+    if (!existingKey) {
+      try {
+        await createApiKey();
+      } catch (error) {
+        console.error("API key failed");
+      }
+    }
 
     window.location.href = "../pages/posts.html";
   } catch (error) {

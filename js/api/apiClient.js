@@ -26,6 +26,12 @@ async function apiClient(endpoint, options = {}) {
     headers.Authorization = `Bearer ${token}`;
   }
 
+  const apiKey = localStorage.getItem("apiKey");
+
+  if (apiKey) {
+    headers["X-Noroff-API-Key"] = apiKey;
+  }
+
   const config = {
     method: body ? "POST" : "GET",
     ...customOptions,
