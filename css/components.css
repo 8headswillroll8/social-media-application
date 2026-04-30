@@ -45,6 +45,51 @@
 }
 
 /* Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 470px;
+  margin: var(--space-3) auto;
+}
+
+.card__header {
+  display: flex;
+  margin: var(--space-1) var(--space-2);
+}
+
+.card__header img {
+  width: 40px;
+  height: 40px;
+}
+
+.card__username {
+  font-weight: var(--font-w-medium);
+}
+
+.btn-follow {
+  margin-left: auto;
+}
+
+.card__author,
+.card__actions,
+.card__caption,
+.card__comments {
+  margin: 0 var(--space-2);
+}
+
+.card__caption {
+  line-height: var(--line-heigh-comments);
+}
+
+.post__username {
+  font-weight: var(--font-w-semibold);
+}
+
+.post__count {
+  font-size: var(--font-size-200);
+}
+
 .card__avatar {
   border-radius: 50%;
 }
@@ -55,10 +100,91 @@
   overflow: hidden;
 }
 
+.card__actions {
+  display: inline-flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.post__comment,
+.post__like {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+}
+
 .card__content img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.post__like-anim {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Nav menu */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-brand-dark);
+  color: var(--color-brand-lime);
+  min-height: 64px;
+  width: 100%;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+li {
+  display: inline-flex;
+}
+
+.nav__list span {
+  display: none;
+}
+
+.nav__list li a {
+  display: inline-flex;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 150px;
+    flex-direction: column;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: var(--space-14);
+    margin-left: var(--space-4);
+  }
+
+  .nav__list a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .nav__list img {
+    min-width: 20px;
+  }
+
+  .nav__list span {
+    display: inline;
+  }
 }
 
 /* Footer  */
@@ -109,6 +235,19 @@ footer {
 
 .btn:hover .btn__text {
   transform: scale(1.06);
+}
+
+.btn-outline {
+  font-weight: var(--font-w-medium);
+  padding: 0 var(--space-7);
+  max-height: 34px;
+
+  border: 1px solid transparent;
+  border-radius: 999px;
+
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    var(--color-gradient-main) border-box;
 }
 
 /* input fields */

@@ -13,7 +13,7 @@
   </head>
   <body>
     <header class="header">
-      <a href="../index.html">
+      <a href="./posts.html">
         <img
           class="header__logo--compact"
           src="/assets/graphics/logos/flori-logo-logomark.svg"
@@ -37,10 +37,14 @@
               alt=""
             />
             <div class="card__author">
-              <p>Helena</p>
+              <p class="card__username">Helena</p>
               <time datetime="">Laster…</time>
             </div>
-            <button type="button">Følger</button>
+            <button class="btn-follow btn-outline" type="button">Følger</button>
+          </div>
+
+          <div class="post__like-anim">
+            <img src="../assets/graphics/icons/icon-heart.svg" alt="" />
           </div>
 
           <div class="card__content">
@@ -48,17 +52,6 @@
               src="../assets/images/content/content-helena-01.webp"
               alt="Mange planter i et drivhus"
             />
-          </div>
-
-          <div class="card__caption">
-            <p>
-              <span>Helena</span> Favorittstedet mitt akkurat nå. Trenger
-              egentlig ikke mer enn dette
-            </p>
-          </div>
-
-          <div class="card__comments">
-            <p><span>Balkongdrøm</span> Tar du meg med neste gang?</p>
           </div>
 
           <div class="card__actions">
@@ -74,6 +67,20 @@
               <img src="../assets/graphics/icons/icon-comment.svg" alt="" />
               <span class="post__count">3</span>
             </button>
+          </div>
+
+          <div class="card__caption">
+            <p>
+              <span class="post__username">Helena</span> Favorittstedet mitt
+              akkurat nå. Trenger egentlig ikke mer enn dette
+            </p>
+          </div>
+
+          <div class="card__comments">
+            <p>
+              <span class="post__username">Balkongdrøm</span> Tar du meg med
+              neste gang?
+            </p>
           </div>
         </article>
       </section>
@@ -92,13 +99,13 @@
         <li>
           <a href="#">
             <img src="../assets/graphics/icons/icon-plus.svg" alt="" />
-            <span>Opprett innlegg</span>
+            <span>Opprett</span>
           </a>
         </li>
 
         <!-- search -->
         <li>
-          <a href="../index.html">
+          <a href="#">
             <img src="../assets/graphics/icons/icon-search.svg" alt="" />
             <span>Søk</span>
           </a>
