@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="../css/variables.css" />
     <link rel="stylesheet" href="../css/components.css" />
     <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/posts.css" />
+    <link rel="stylesheet" href="../css/create-post.css" />
     <link rel="icon" href="../assets/graphics/logos/flori-logo-favicon.svg" />
-    <title>Flori | Feed</title>
+    <title>Flori | Lag post</title>
   </head>
   <body>
     <header class="header">
@@ -28,8 +28,36 @@
       </button>
     </header>
     <main>
-      <section class="feed" aria-label="Innlegg">
-        <!-- card rendered with html injection -->
+      <section class="create">
+        <h1>Hva vil du dele?</h1>
+        <form class="create__form" novalidate>
+          <!-- image url -->
+          <label for="url"></label>
+          <input
+            type="url"
+            name="url"
+            id="url"
+            placeholder="Lenke til bilde her (lim in URL)"
+          />
+          <!-- image preview dom manipulation -->
+          <div class="create__preview is-hidden">
+            <img
+              class="create__preview-img"
+              src="../assets/images/content/content-christine-krieg-02.webp"
+              alt=""
+            />
+          </div>
+          <!-- caption -->
+          <label for="caption" class="visually-hidden">Bildetekst</label>
+          <textarea
+            id="caption"
+            name="caption"
+            placeholder="Din bildetekst her"
+          ></textarea>
+          <button type="submit" class="btn create-btn">
+            <span class="btn__text">Del</span>
+          </button>
+        </form>
       </section>
     </main>
     <nav class="nav" aria-label="Hovednavigasjon">
@@ -44,7 +72,7 @@
 
         <!-- create -->
         <li>
-          <a href="./create-post.html">
+          <a href="#">
             <img src="../assets/graphics/icons/icon-plus.svg" alt="" />
             <span>Opprett</span>
           </a>
@@ -67,6 +95,6 @@
         </li>
       </ul>
     </nav>
-    <script type="module" src="../js/pages/posts.js"></script>
+    <script type="module" src="../js/pages/createPost.js"></script>
   </body>
 </html>

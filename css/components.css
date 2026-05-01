@@ -253,7 +253,8 @@ footer {
 
 /* input fields */
 
-input {
+input,
+textarea {
   background-color: rgba(234, 253, 126, 0.1);
   height: 50px;
   width: 100%;
@@ -262,12 +263,17 @@ input {
   outline: 1px solid var(--color-neutral-100);
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   outline: none;
   border: 1px solid transparent;
   background-image: linear-gradient(#fff, #fff), var(--color-gradient-main);
   background-origin: border-box;
   background-clip: padding-box, border-box;
+}
+
+textarea {
+  padding: var(--space-3) var(--space-4);
 }
 
 .visually-hidden {
