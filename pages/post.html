@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/posts.css" />
+    <link rel="icon" href="../assets/graphics/logos/flori-logo-favicon.svg" />
+    <title>Flori | Post</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="./posts.html">
+        <img
+          class="header__logo--compact"
+          src="/assets/graphics/logos/flori-logo-logomark.svg"
+          alt="Flori logomark" />
+        <img
+          class="header__logo--full"
+          src="/assets/graphics/logos/flori-logo-main.svg"
+          alt="Flori logo"
+      /></a>
+      <button class="header__logout" type="button" aria-label="Logg ut">
+        <img src="/assets/graphics/icons/icon-log-out.svg" alt="" />
+      </button>
+    </header>
+    <main>
+      <section class="feed" aria-label="Innlegg">
+        <!-- card rendered with html injection -->
+      </section>
+    </main>
+    <nav class="nav" aria-label="Hovednavigasjon">
+      <ul class="nav__list">
+        <!-- home -->
+        <li>
+          <a href="../pages/posts.html">
+            <img src="../assets/graphics/icons/icon-home.svg" alt="" />
+            <span>Hjem</span>
+          </a>
+        </li>
+
+        <!-- create -->
+        <li>
+          <a href="#">
+            <img src="../assets/graphics/icons/icon-plus.svg" alt="" />
+            <span>Opprett</span>
+          </a>
+        </li>
+
+        <!-- search -->
+        <li>
+          <a href="#">
+            <img src="../assets/graphics/icons/icon-search.svg" alt="" />
+            <span>Søk</span>
+          </a>
+        </li>
+
+        <!-- profile -->
+        <li>
+          <a href="../pages/user-profile.html">
+            <img src="../assets/graphics/icons/icon-profile.svg" alt="" />
+            <span>Profil</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <script type="module" src="../js/pages/post.js"></script>
+  </body>
+</html>
