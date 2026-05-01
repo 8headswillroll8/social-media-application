@@ -267,7 +267,8 @@ input:focus,
 textarea:focus {
   outline: none;
   border: 1px solid transparent;
-  background-image: linear-gradient(#fff, #fff), var(--color-gradient-main);
+  background-image:
+    linear-gradient(#fbffe5, #fbffe5), var(--color-gradient-main);
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }

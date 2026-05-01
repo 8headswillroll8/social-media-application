@@ -112,3 +112,15 @@ button {
 button {
   cursor: pointer;
 }
+
+/* Override browser autofill background color on inputs */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fbffe5 inset;
+  -webkit-text-fill-color: var(--color-text);
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #fbffe5 inset;
+}

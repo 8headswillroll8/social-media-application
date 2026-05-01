@@ -1,3 +1,7 @@
+body {
+  background-color: rgba(234, 253, 126, 0.2);
+}
+
 .create {
   max-width: 600px;
   display: flex;
@@ -20,4 +24,10 @@
 
 .create-btn {
   margin: var(--space-2) 0;
+}
+
+#url-feedback,
+#caption-feedback {
+  text-align: left;
+  margin-top: var(--space-2);
 }

@@ -39,13 +39,10 @@
             id="url"
             placeholder="Lenke til bilde her (lim in URL)"
           />
+          <div id="url-feedback" aria-live="polite"></div>
           <!-- image preview dom manipulation -->
-          <div class="create__preview is-hidden">
-            <img
-              class="create__preview-img"
-              src="../assets/images/content/content-christine-krieg-02.webp"
-              alt=""
-            />
+          <div class="create__preview visually-hidden">
+            <img class="create__preview-img" src="" alt="" />
           </div>
           <!-- caption -->
           <label for="caption" class="visually-hidden">Bildetekst</label>
@@ -54,6 +51,8 @@
             name="caption"
             placeholder="Din bildetekst her"
           ></textarea>
+          <div id="caption-feedback" aria-live="polite"></div>
+          <div class="create__feedback"></div>
           <button type="submit" class="btn create-btn">
             <span class="btn__text">Del</span>
           </button>
