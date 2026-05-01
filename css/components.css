@@ -247,7 +247,7 @@ footer {
   border-radius: 999px;
 
   background:
-    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(#fbffe5, #fbffe5) padding-box,
     var(--color-gradient-main) border-box;
 }
 
