@@ -1,0 +1,33 @@
+body {
+  background-color: rgba(234, 253, 126, 0.2);
+}
+
+.edit {
+  max-width: 600px;
+  display: flex;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  flex-direction: column;
+  text-align: center;
+}
+
+.edit__preview {
+  margin: var(--space-5) auto;
+  aspect-ratio: 4/5;
+  max-width: 600px;
+}
+
+.edit__preview-img {
+  width: 100%;
+  height: auto;
+}
+
+.edit-btn {
+  margin: var(--space-2) 0;
+}
+
+#url-feedback,
+#caption-feedback {
+  text-align: left;
+  margin-top: var(--space-2);
+}
