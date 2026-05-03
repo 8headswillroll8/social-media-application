@@ -14,23 +14,29 @@ const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
 const loadPost = async () => {
-  console.log("id:", id);
   const response = await get(`/social/posts/${id}`);
-  console.log(response);
+
+  url.value = response.data.media.url;
+  caption.value = response.data.title;
+
+  updatePreview();
 };
+
+function updatePreview() {
+  const urlValue = url.value.trim();
+
+  if (urlValue) {
+    previewImg.src = urlValue;
+    preview.classList.remove("is-hidden");
+  } else {
+    previewImg.removeAttribute("src");
+    preview.classList.add("is-hidden");
+  }
+}
 
 loadPost();
 
-// url.addEventListener("input", (e) => {
-//   const urlValue = url.value.trim();
-
-//   if (urlValue) {
-//     previewImg.src = urlValue;
-//     preview.classList.remove("visually-hidden");
-//   } else {
-//     preview.classList.add("visually-hidden");
-//   }
-// });
+url.addEventListener("input", updatePreview);
 
 // async function editPost() {
 //   if (!id) {

@@ -243,6 +243,9 @@ footer {
 }
 
 .btn-outline {
+  display: flex;
+  align-items: center;
+
   font-weight: var(--font-w-medium);
   padding: 0 var(--space-7);
   max-height: 34px;
@@ -281,12 +284,17 @@ textarea {
   padding: var(--space-3) var(--space-4);
 }
 
+/* Visually hidden */
 .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+}
+
+.is-hidden {
+  display: none;
 }
 
 .has-error {

@@ -29,6 +29,13 @@ async function getPost() {
 }
 
 function renderPost(post) {
+  const username = localStorage.getItem("name");
+  const isOwner = username === post.author.name;
+
+  const editLink = isOwner
+    ? `<a class="btn-follow btn-edit btn-outline" href="./edit-post.html?id=${post.id}">Rediger</a>`
+    : "";
+
   const postCard = `
 <article class="card">
   <div class="card__header">
@@ -41,9 +48,7 @@ function renderPost(post) {
       <p class="card__username">${post.author.name}</p>
       <time datetime="${post.created}">${post.created}</time>
     </div>
-    <button class="btn-follow btn-outline" type="button">
-      Følger
-    </button>
+   ${editLink}
   </div>
 
   <div class="post__like-anim">

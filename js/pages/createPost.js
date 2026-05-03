@@ -73,6 +73,7 @@ form.addEventListener("submit", async (e) => {
 
   const postData = {
     title: caption.value.trim(),
+    tags: ["flori"],
     media: {
       url: url.value.trim(),
       alt: "",

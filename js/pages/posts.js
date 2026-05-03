@@ -4,10 +4,11 @@ import { get } from "../api/apiClient.js";
 initHeader();
 
 const feed = document.querySelector(".feed");
+const tag = "flori";
 
 async function getPosts() {
   try {
-    const response = await get("/social/posts?_author=true");
+    const response = await get(`/social/posts?_author=true&_tag=${tag}`);
 
     const posts = response.data;
 
